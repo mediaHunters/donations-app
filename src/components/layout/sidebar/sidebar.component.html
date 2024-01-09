@@ -1,0 +1,114 @@
+<div class="sidebar_menu" [@onSideNavChange]="sidebarState">
+  <mat-nav-list class="menu-list">
+    <a
+      mat-list-item
+      routerLinkActive="active-list-item"
+      routerLink="search"
+      title="account"
+      [ngClass]="
+        sidebarState === 'close'
+          ? 'mdc-list-item__content--closed'
+          : 'mdc-list-item__content--opened'
+      ">
+      @if (sidebarState === 'open') {
+        <mat-icon [@iconAnimation]="sidebarState">search</mat-icon>
+        <span class="label" [@labelAnimation]="sidebarState">Wyszukaj</span>
+      } @else {
+        <div class="blue-square-icon">
+          <mat-icon [@iconAnimation]="sidebarState" class="white-icon"
+            >search</mat-icon
+          >
+        </div>
+      }
+    </a>
+
+    <a
+      mat-list-item
+      routerLinkActive="active-list-item"
+      routerLink="best-choices"
+      title="account"
+      [ngClass]="
+        sidebarState === 'close'
+          ? 'mdc-list-item__content--closed'
+          : 'mdc-list-item__content--opened'
+      ">
+      @if (sidebarState === 'open') {
+          <mat-icon
+          svgIcon="double-circles-icon"
+          [@iconAnimation]="sidebarState"></mat-icon>
+        <span class="label" [@labelAnimation]="sidebarState">Best for you</span>
+        <span class="counter">3 nowe</span>
+      } @else {
+        <div class="bgc-radius-icon-lavender-blue">
+          <mat-icon
+            svgIcon="double-circles-icon"
+            [@iconAnimation]="sidebarState"></mat-icon>
+        </div>
+
+        <span class="label" [@labelAnimation]="sidebarState">Best for you</span>
+      }
+    </a>
+
+    <a
+      mat-list-item
+      routerLinkActive="active-list-item"
+      routerLink="bookmarks"
+      title="account"
+      [ngClass]="
+        sidebarState === 'close'
+          ? 'mdc-list-item__content--closed'
+          : 'mdc-list-item__content--opened'
+      ">
+      <mat-icon class="yellow-icon" [@iconAnimation]="sidebarState">
+        bookmark
+      </mat-icon>
+
+      <span class="label" [@labelAnimation]="sidebarState">Zakładki</span>
+    </a>
+    <a
+      mat-list-item
+      routerLinkActive="active-list-item"
+      routerLink="faq"
+      title="help"
+      [ngClass]="
+        sidebarState === 'close'
+          ? 'mdc-list-item__content--closed'
+          : 'mdc-list-item__content--opened'
+      ">
+      @if (sidebarState === 'open') {
+          <mat-icon color="primary" [@iconAnimation]="sidebarState"
+          >help_outline</mat-icon
+        >
+        <span class="label" [@labelAnimation]="sidebarState">FAQ</span>
+        <span class="counter">2</span>
+
+      } @else {
+        <mat-icon color="primary" [@iconAnimation]="sidebarState"
+        >help_outline</mat-icon
+      >
+      <span class="label" [@labelAnimation]="sidebarState">FAQ</span>
+      }
+
+    </a>
+
+    <a
+      mat-list-item
+      routerLinkActive="active-list-item"
+      routerLink="account"
+      title="account"
+      [ngClass]="
+        sidebarState === 'close'
+          ? 'mdc-list-item__content--closed'
+          : 'mdc-list-item__content--opened'
+      ">
+      <mat-icon
+        color="primary"
+        [@iconAnimation]="sidebarState"
+        fontSet="material-icons">
+        account_circle
+      </mat-icon>
+
+      <span class="label" [@labelAnimation]="sidebarState">Konto</span>
+    </a>
+  </mat-nav-list>
+</div>

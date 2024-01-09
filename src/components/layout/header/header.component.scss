@@ -1,0 +1,19 @@
+.title {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.top-bar {
+  background-color: #fff;
+  padding: 36px 48px 12px 28px;
+  height: 100px;
+  transition: padding-left 0.1s ease; /* Define the transition property */
+}
+
+.push-off-left {
+  padding-left: 17px;
+}
+
+.align-right {
+  margin-left: auto;
+}

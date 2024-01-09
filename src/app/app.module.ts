@@ -1,18 +1,32 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-browser/animations';
+import { AngularMaterialModule } from './angula-material.module';
+import { MatIconRegistry } from '@angular/material/icon';
+import { loadCustomSvgResources } from './custom-icons';
+import { RouterModule } from '@angular/router';
+import ComponentModule from '../components/ComponentModule';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    AngularMaterialModule,
+    RouterModule,
+    ComponentModule
   ],
-  providers: [],
+  providers: [ provideAnimations()],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer) {
+    loadCustomSvgResources(this.matIconRegistry, this.domSanitizer);
+  }
+ }
