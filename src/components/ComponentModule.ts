@@ -5,9 +5,17 @@ import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import LayoutModule from './layout/LayoutModule';
 import { SharedModule } from './shared/SharedModule';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 const COMPONENTS = [
   HomeComponent,
+  LoginComponent,
+  RegisterComponent,
+  ProductListComponent,
+  ProductDetailComponent
 ];
 
 @NgModule({
@@ -15,4 +23,4 @@ const COMPONENTS = [
   imports: [RouterModule, BrowserModule, LayoutModule, AngularMaterialModule, SharedModule],
   exports: [...COMPONENTS, LayoutModule],
 })
-export default class ComponentModule {}
+export default class ComponentModule { }
