@@ -1,0 +1,82 @@
+.login-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+    width: calc(100vw - 150px);
+    .login-form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 100px;
+        width: 70%;
+        .settings-icon {
+            font-size: 30px;
+            width: 40px;
+            height: 40px;
+        }
+        .main-heading {
+            font-size: 20px;
+            margin: 20px 0px;
+            letter-spacing: 1px;
+        }
+        mat-form-field {
+            width: 350px;
+        }
+        .btn-primary {
+            background-color: #000;
+            color: #fff;
+            border-radius: 20px;
+            padding: 20px 30px;
+        }
+        .signup-link {
+            font-size: 18px;
+            letter-spacing: 1px;
+            a {
+                color: #3457BE;
+            }
+        }
+        .data-div {
+            width: 60%;
+        }
+        .mat-card {
+            margin-bottom: 20px;
+            width: 100%;
+            // padding: 10px;
+            mat-card-content {
+                padding: 0;
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                .text-div {
+                    margin-left: 10px;
+                    h5 {
+                        margin: 0;
+                        margin-top: 10px;
+                    }
+                    p {
+                        margin: 0;
+                        margin-top: 10px;
+                    }
+                }
+                .icon-div {
+                    padding: 10px 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 95%;
+                    p {
+                        margin: 0;
+                    }
+                    .share-icon,.bookmark-icon {
+                        margin-right: 10px;
+                    }
+                    .icon-right-div {
+                        display: flex;
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+    }
+}
