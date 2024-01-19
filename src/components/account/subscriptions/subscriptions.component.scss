@@ -1,0 +1,96 @@
+.login-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+    // width: calc(100vw - 150px);
+    .login-form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 40px;
+        width: 70%;
+        .settings-icon {
+            font-size: 30px;
+            width: 40px;
+            height: 40px;
+        }
+        .main-heading {
+            font-size: 22px;
+            font-weight: 400;
+            margin: 10px 0px 20px 0px;
+            color: #00164E;
+            letter-spacing: 1px;
+            line-height: 22px
+        }
+        mat-form-field {
+            width: 350px;
+        }
+        .btn-primary {
+            background-color: #000;
+            color: #fff;
+            border-radius: 20px;
+            padding: 20px 30px;
+        }
+        .signup-link {
+            font-size: 18px;
+            letter-spacing: 1px;
+            a {
+                color: #3457BE;
+            }
+        }
+        .data-div {
+            width: 60%;
+            mat-form-field {
+                width: 100%;
+            }
+            .title {
+                font-size: 22px;
+                font-weight: 400;
+                letter-spacing: 1px;
+                // margin: 20px 10px;
+                color: #484848;
+                line-height: 28px;
+                margin: 1px 0px 10px 0px;
+            }
+            .sub-title {
+                margin: 10px 0px;
+                font-size: 16px;
+                font-weight: 400;
+                letter-spacing: 1px;
+                // margin: 20px 10px;
+                color: #030303;
+                line-height: 24px;
+            }
+            .btn-primary-new {
+                background-color: #fff;
+                border: 1px solid #BA1A1A;
+                border-radius: 8px;
+                color: #BA1A1A;
+                padding: 20px 30px;
+                margin-top: 20px;
+                margin-bottom: 30px;
+            }
+            .toggle-button {
+                width: 100%;
+                border-radius: 30px;
+                margin: 10px 0px;
+                .mat-button-toggle {
+                    width: 100%;
+                    &.mat-button-toggle-checked {
+                        background-color: #E8DEF8;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .login-form {
+        width: 100% !important;
+        .data-div {
+            width: 95% !important;
+        }
+    }
+}

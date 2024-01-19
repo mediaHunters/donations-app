@@ -1,1 +1,30 @@
-<p>subscriptions works!</p>
+<div class="login-wrapper">
+  <form class="login-form">
+    <mat-icon
+      class="settings-icon material-icons-outlined"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      fontIcon="help"
+    ></mat-icon>
+    <h5 class="main-heading">Subscriptions</h5>
+    <div class="data-div">
+      <h6 class="title">Zgody:</h6>
+      <mat-button-toggle-group class="toggle-button" name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle checked value="bold">Bold</mat-button-toggle>
+        <mat-button-toggle value="italic">Italic</mat-button-toggle>
+      </mat-button-toggle-group>
+      <h6 class="sub-title">Aktywna do: 11.01.2024</h6>
+      <button type="submit" mat-raised-button class="btn btn-primary-new btn-sm btn-block">
+        <mat-icon
+          style="font-size: 16px; width: 18px; height: 18px"
+          class="settings-icon material-icons-outlined"
+          color="red"
+          aria-hidden="false"
+          aria-label="Example home icon"
+          fontIcon="help"
+        ></mat-icon>
+        Anuluj subskrypcję
+      </button>
+    </div>
+  </form>
+</div>

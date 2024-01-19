@@ -12,7 +12,8 @@ import { MatSelectModule } from "@angular/material/select";
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatChipsModule } from '@angular/material/chips';
 import { MatCardModule } from '@angular/material/card';
-import {MatExpansionModule} from '@angular/material/expansion';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 const COMPONENTS = [
     MatToolbarModule,
     MatSidenavModule,
@@ -30,7 +31,8 @@ const COMPONENTS = [
     MatCheckboxModule,
     MatChipsModule,
     MatCardModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatButtonToggleModule
 ]
 
 @NgModule({
