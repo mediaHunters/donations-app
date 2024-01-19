@@ -3,22 +3,26 @@
     align-items: flex-start;
     justify-content: center;
     height: 100vh;
-    width: calc(100vw - 150px);
+    // width: calc(100vw - 150px);
     .login-form {
         display: flex;
         align-items: center;
         flex-direction: column;
-        margin-top: 100px;
+        margin-top: 50px;
         width: 70%;
         .settings-icon {
             font-size: 30px;
             width: 40px;
             height: 40px;
+            color: #EDC200;
         }
         .main-heading {
-            font-size: 20px;
-            margin: 20px 0px;
+            font-size: 22px;
+            font-weight: 400;
+            margin: 10px 0px 20px 0px;
+            color: #00164E;
             letter-spacing: 1px;
+            line-height: 22px
         }
         mat-form-field {
             width: 350px;
@@ -42,6 +46,7 @@
         .mat-card {
             margin-bottom: 20px;
             width: 100%;
+            box-shadow: 1px 5px 6px rgba(0, 0, 0, 0.1);
             // padding: 10px;
             mat-card-content {
                 padding: 0;
@@ -53,11 +58,26 @@
                     h5 {
                         margin: 0;
                         margin-top: 10px;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 20px;
+                        letter-spacing: 0.5px;
+                        color: #3457BE;
                     }
                     p {
                         margin: 0;
                         margin-top: 10px;
+                        font-weight: 500;
+                        font-size: 11px;
+                        line-height: 16px;
+                        letter-spacing: 0.5px;
+                        color: #000A30;
                     }
+                }
+                .location-icon {
+                    width: 20px;
+                    height: 20px;
+                    font-size: 18px;
                 }
                 .icon-div {
                     padding: 10px 10px;
@@ -67,9 +87,20 @@
                     width: 95%;
                     p {
                         margin: 0;
+                        font-weight: 500;
+                        font-size: 11px;
+                        color: #00228A;
+                        line-height: 16px;
+                        margin-left: 10px;
                     }
                     .share-icon,.bookmark-icon {
                         margin-right: 10px;
+                    }
+                    .bookmark-icon {
+                        color: #EDC200;
+                    }
+                    .share-icon {
+                        color: 00164E;
                     }
                     .icon-right-div {
                         display: flex;
@@ -77,6 +108,15 @@
                     }
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .login-form {
+        width: 100% !important;
+        .data-div {
+            width: 95% !important;
         }
     }
 }
