@@ -1,21 +1,11 @@
 <app-header></app-header>
 <!-- [@bottomToTop]="mobileQuery.matches ? sidebarState: null" -->
 <mat-sidenav-container class="sidemenu-container">
-  <mat-sidenav [mode]="mobileQuery.matches ? 'over' : 'side'" [opened]="isOpened" autosize> 
+  <mat-sidenav #sidenav [mode]="mobileQuery.matches ? 'over' : 'side'" [opened]="isOpened">
     <app-sidebar></app-sidebar>
   </mat-sidenav>
 
-  <mat-sidenav-content [@onSideNavChange]="sidebarState">
+  <mat-sidenav-content [@onSideNavChange]="!mobileQuery.matches ? sidebarState : null">
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
-
-<!-- <mat-sidenav-container class="example-container" autosize>
-	<mat-sidenav #sidenav class="example-sidenav" [mode]="mobileQuery.matches ? 'over' : 'side'" [opened]="isOpened" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
-		<app-sidebar></app-sidebar>
-	</mat-sidenav>
-  <mat-sidenav-content>
-    <router-outlet></router-outlet>
-  </mat-sidenav-content> 
-
-</mat-sidenav-container> -->

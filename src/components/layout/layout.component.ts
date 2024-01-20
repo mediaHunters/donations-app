@@ -43,6 +43,7 @@ export class LayoutComponent implements OnInit {
       this.isShowing = false;
     }
   }
+  count: number = 0;
   constructor(
     private sidebarService: SidebarService,
     private changeDetectorRef: ChangeDetectorRef, media: MediaMatcher
@@ -56,6 +57,9 @@ export class LayoutComponent implements OnInit {
   }
 
   ngOnInit() {
+    setTimeout(() => {
+      this.count = 1;
+    }, 2000);
     this.subscribeToSidebarState();
   }
 
@@ -63,7 +67,10 @@ export class LayoutComponent implements OnInit {
     this.sidebarService.sidebarStateObservable$.subscribe(
       (newState: string) => {
         this.sidebarState = newState;
-        console.log(newState)
+        console.log(newState);
+        if (this.mobileQuery.matches && this.count == 1) {
+          this.sidenav.toggle();
+        }
       }
     );
   }
