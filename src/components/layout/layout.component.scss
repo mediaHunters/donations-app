@@ -31,3 +31,9 @@
   top: 0;
   z-index: 1;
 }
+
+@media (max-width: 767px) {
+  .mat-sidenav-content {
+    height: calc(100vh - 100px);
+  }
+}
