@@ -11,7 +11,6 @@ export function mainContentAnimation(
   minWidth: string = defaultMinWidth,
   maxWidth: string = defaultMaxWidth,
 ): AnimationTriggerMetadata {
-  console.log(minWidth)
   return trigger('onSideNavChange', [
     state('close',
       style({
