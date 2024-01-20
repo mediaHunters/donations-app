@@ -1,9 +1,10 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { mainContentAnimation } from '../../app/animations';
 import { SidebarService } from './services/sidebar.service';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { MatSidenav } from '@angular/material/sidenav';
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
@@ -24,6 +25,24 @@ export class LayoutComponent implements OnInit {
   private breakpointSubscription!: Subscription;
   mobileQuery: MediaQueryList;
   private _mobileQueryListener: () => void;
+  @ViewChild('sidenav') sidenav!: MatSidenav;
+  isExpanded = true;
+  showSubmenu: boolean = false;
+  isShowing = false;
+  showSubSubMenu: boolean = false;
+  isOpened: boolean = true;
+
+  mouseenter() {
+    if (!this.isExpanded) {
+      this.isShowing = true;
+    }
+  }
+
+  mouseleave() {
+    if (!this.isExpanded) {
+      this.isShowing = false;
+    }
+  }
   constructor(
     private sidebarService: SidebarService,
     private changeDetectorRef: ChangeDetectorRef, media: MediaMatcher
@@ -31,6 +50,9 @@ export class LayoutComponent implements OnInit {
     this.mobileQuery = media.matchMedia('(max-width: 600px)'); // Adjust the breakpoint as needed
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
+    if(this.mobileQuery.matches) {
+      this.isOpened = false;
+    }
   }
 
   ngOnInit() {
