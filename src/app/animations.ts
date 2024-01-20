@@ -1,7 +1,7 @@
 import { trigger, transition, style, animate, AnimationTriggerMetadata, state, group, query, animateChild } from '@angular/animations';
 
 const defaultDuration = '100ms';
-const defaultMinWidth = '104px';
+const defaultMinWidth = window.matchMedia('(max-width: 600px)').matches ? '0px' : '104px';
 const defaultMaxWidth = '280px';
 const defaultMinFontSize = '20px';
 const defaultMaxFontSize = '24px';
@@ -11,6 +11,7 @@ export function mainContentAnimation(
   minWidth: string = defaultMinWidth,
   maxWidth: string = defaultMaxWidth,
 ): AnimationTriggerMetadata {
+  console.log(minWidth)
   return trigger('onSideNavChange', [
     state('close',
       style({

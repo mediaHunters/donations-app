@@ -1,7 +1,7 @@
 <app-header></app-header>
-
+<!-- [@bottomToTop]="mobileQuery.matches ? sidebarState: null" -->
 <mat-sidenav-container class="sidemenu-container">
-  <mat-sidenav [@bottomToTop]="mobileQuery.matches ? sidebarState: ''" [mode]="mobileQuery.matches ? 'over' : 'side'" opened="true" autosize> 
+  <mat-sidenav [mode]="mobileQuery.matches ? 'over' : 'side'" [opened]="isOpened" autosize> 
     <app-sidebar></app-sidebar>
   </mat-sidenav>
 

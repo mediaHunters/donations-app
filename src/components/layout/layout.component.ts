@@ -18,7 +18,7 @@ import { MatSidenav } from '@angular/material/sidenav';
         transform: 'translateY(100%)', // Adjust the percentage based on your requirements
       })),
       transition('open <=> close', animate('0.3s ease-in-out')),
-    ]),mainContentAnimation()],
+    ]), mainContentAnimation()],
 })
 export class LayoutComponent implements OnInit {
   public sidebarState!: string;
@@ -50,7 +50,7 @@ export class LayoutComponent implements OnInit {
     this.mobileQuery = media.matchMedia('(max-width: 600px)'); // Adjust the breakpoint as needed
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
-    if(this.mobileQuery.matches) {
+    if (this.mobileQuery.matches) {
       this.isOpened = false;
     }
   }
