@@ -86,6 +86,15 @@
     }
 }
 
+@media (max-width: 991px){
+    .login-form {
+        width: 90% !important;
+        .data-div {
+            width: 95% !important;
+        }
+    }
+}
+
 @media (max-width: 767px){
     .login-form {
         width: 100% !important;
