@@ -57,6 +57,7 @@
             white-space: nowrap; /* Prevents text from wrapping to the next line */
             overflow: hidden; /* Hides any content that overflows the container */
             text-overflow: ellipsis;
+            max-width: 95%;
           }
           p {
             margin: 0;
