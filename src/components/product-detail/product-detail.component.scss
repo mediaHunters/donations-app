@@ -140,6 +140,9 @@
       font-weight: 400;
       margin-top: 20px;
       color: #3457be;
+      // white-space: nowrap; /* Prevents text from wrapping to the next line */
+      // overflow: hidden; /* Hides any content that overflows the container */
+      // text-overflow: ellipsis;
     }
     .subtitle-text {
       font-size: 16px;
