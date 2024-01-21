@@ -1,5 +1,5 @@
 <div class="login-wrapper">
-  <form class="login-form">
+  <form class="login-form" [ngClass]="{'full-width': inline && inline == 1}">
     <mat-icon
       class="settings-icon material-symbols-outlined"
       aria-hidden="false"
@@ -7,7 +7,7 @@
       fontIcon="bookmark"
     ></mat-icon>
     <h5 class="main-heading">BookMarks</h5>
-    <div class="data-div">
+    <div class="data-div" [ngClass]="{'full-width': inline && inline == 1}">
       <mat-card class="mat-card">
         <mat-card-content>
           <div class="text-div">

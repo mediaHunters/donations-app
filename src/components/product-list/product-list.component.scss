@@ -1,0 +1,177 @@
+.main-wrapper {
+  display: flex;
+  height: 100vh;
+  // width: calc(100vw - 150px);
+  .left-box {
+    width: 70%;
+    padding: 10px;
+    .left-side-main-div {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .mat-card {
+      border-radius: 15px;
+      max-width: 300px;
+      img {
+        width: 100%;
+        height: 150px;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+      }
+      mat-card-content {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+      }
+      .inside-div {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 10px;
+        .checklist {
+          margin-left: 10px;
+        }
+        .icon-div {
+          display: flex;
+          .share-icon,
+          .bookmark-icon {
+            margin-left: 20px;
+          }
+          .bookmark-icon {
+            color: #edc200;
+          }
+        }
+        .text-div {
+          margin-left: 10px;
+          h5 {
+            margin: 0;
+            margin-top: 10px;
+            color: #3457be;
+            font-weight: 400;
+            font-size: 14px;
+            white-space: nowrap; /* Prevents text from wrapping to the next line */
+            overflow: hidden; /* Hides any content that overflows the container */
+            text-overflow: ellipsis;
+          }
+          p {
+            margin: 0;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+        .icon-text-main-div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 92%;
+        }
+        .icon-text-div {
+          display: flex;
+          align-items: center;
+          margin-right: 10px;
+          mat-icon {
+            color: #004f58;
+          }
+          p {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 14px;
+            color: #00228a;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+  .right-box {
+    width: 30%;
+    padding: 20px;
+    .title-text {
+      font-size: 20px;
+      letter-spacing: 1px;
+      line-height: 20px;
+      margin: 0;
+      font-weight: 400;
+      margin-top: 20px;
+      color: #3457be;
+      // white-space: nowrap; /* Prevents text from wrapping to the next line */
+      // overflow: hidden; /* Hides any content that overflows the container */
+      // text-overflow: ellipsis;
+    }
+    .subtitle-text {
+      font-size: 16px;
+      letter-spacing: 1px;
+      line-height: 16px;
+      font-weight: 400;
+      margin: 0;
+      margin-top: 15px;
+      color: #00164e;
+    }
+    .description {
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      line-height: 12px;
+      margin: 0;
+      margin-top: 15px;
+      color: #00164e;
+    }
+  }
+}
+
+.mat-mdc-standard-chip.mat-primary,
+.mat-mdc-standard-chip.mat-mdc-chip-highlighted.mat-primary {
+  background: #f7f2fa;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
+  .mdc-evolution-chip__action {
+    background-color: #00164e;
+  }
+  .mdc-evolution-chip__text-label {
+    color: #49454f;
+  }
+}
+
+@media (max-width: 991px){
+    .left-box {
+        width: 100% !important;
+      }
+    .right-box {
+        display: none;
+    }
+    .left-side-main-div {
+        align-items: center;
+        justify-content: center;
+    }
+    .mat-card {
+        width: 400px;
+        max-width: 400px !important;
+        mat-card-content {
+            width: 400px !important;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+  .main-wrapper {
+    flex-wrap: wrap;
+  }
+  .left-box {
+    width: 100% !important;
+  }
+  .mat-card {
+    width: unset;
+    max-width: 95% !important;
+    mat-card-content {
+        width: 100% !important;
+    }
+}
+  .right-box {
+    display: none;
+  }
+}
