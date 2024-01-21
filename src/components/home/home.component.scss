@@ -180,10 +180,22 @@
 }
 
 @media (max-width: 767px) {
+  img {
+    width: 100%;
+  }
+  .content {
+    padding: 10px 20px;
+    .dotations-description__wrapper__content {
+      flex-direction: column;
+      padding: 10px;
+    }
+  }
   .sides-container {
     flex-wrap: wrap;
   }
   .dotations-description__wrapper__icons-list {
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     img {
       margin-bottom: 24px;
