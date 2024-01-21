@@ -1,6 +1,8 @@
 .main-wrapper {
   display: flex;
-  height: 100vh;
+//   align-items: flex-start;
+//   justify-content: center;
+//   height: calc(100vh - 100px);
   // width: calc(100vw - 150px);
   .left-box {
     width: 70%;

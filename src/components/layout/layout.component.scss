@@ -1,5 +1,8 @@
 .sidemenu-container {
   height: 100%;
+  .mat-sidenav-content {
+    height: calc(100vh - 100px);
+  }
 }
 
 .sidenav-content {
@@ -16,6 +19,7 @@
 
 .sidenav-container {
   height: 100%;
+
 }
 
 .sidenav {
