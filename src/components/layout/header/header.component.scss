@@ -17,3 +17,9 @@
 .align-right {
   margin-left: auto;
 }
+
+@media (max-width: 767px){
+  .top-bar {
+    padding: 36px 12px 12px 12px;
+  }
+}
