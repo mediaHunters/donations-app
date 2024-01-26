@@ -64,15 +64,19 @@
 }
 
 @media (max-width: 767px) {
-  .top-bar {
-    padding: 36px 12px 12px 12px;
+  .bottom-bar {
+    padding: 36px 12px 20px 20px;
   }
   .left-div {
+    order: 2;
     flex-direction: column;
     align-items: flex-start !important;
     h6 {
         margin-left: 0 !important;
     }
+  }
+  .right-div {
+    order: 1;
   }
   .bottom-bar {
     height: auto !important;
