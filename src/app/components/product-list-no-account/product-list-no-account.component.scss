@@ -223,6 +223,7 @@
   }
   .left-box {
     width: 100% !important;
+    order: 2;
   }
   .mat-card {
     width: unset;
@@ -232,6 +233,11 @@
     }
   }
   .right-box {
-    display: none;
+    order: 1;
+    width: 100% !important;
+    display: flex !important;
+    .right-side-div {
+        height: auto !important;
+    }
   }
 }

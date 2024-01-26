@@ -81,5 +81,7 @@
   .bottom-bar {
     height: auto !important;
     position: unset !important;
+    flex-direction: column;
+    align-items: flex-start !important;
   }
 }
