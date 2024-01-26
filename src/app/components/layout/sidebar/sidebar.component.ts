@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { sidebarAnimation, iconAnimation, labelAnimation } from '../../../app/animations';
 import { SidebarService } from '../services/sidebar.service';
+import { iconAnimation, labelAnimation, sidebarAnimation } from '../../../animations';
 
 @Component({
   selector: 'app-sidebar',

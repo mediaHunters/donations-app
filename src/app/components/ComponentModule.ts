@@ -1,9 +1,7 @@
-import { AngularMaterialModule } from './../app/angula-material.module';
 import { NgModule } from '@angular/core';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
-import LayoutModule from './layout/LayoutModule';
 import { SharedModule } from './shared/SharedModule';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -14,17 +12,25 @@ import { BookmarksComponent } from './bookmarks/bookmarks.component';
 import { UserSettingsComponent } from './account/user-settings/user-settings.component';
 import { SubscriptionsComponent } from './account/subscriptions/subscriptions.component';
 import { CreditCardComponent } from './account/credit-card/credit-card.component';
+import { AngularMaterialModule } from '../angula-material.module';
+import LayoutModule from './layout/LayoutModule';
+import { ProductListNoSubscriptionComponent } from './product-list-no-subscription/product-list-no-subscription.component';
+import { SubscriptionsNoComponent } from './account/subscriptions-no/subscriptions-no.component';
+import { ProductListNoAccountComponent } from './product-list-no-account/product-list-no-account.component';
 
 const COMPONENTS = [
   HomeComponent,
   LoginComponent,
   RegisterComponent,
   ProductListComponent,
+  ProductListNoSubscriptionComponent,
+  ProductListNoAccountComponent,
   ProductDetailComponent,
   FaqComponent,
   BookmarksComponent,
   UserSettingsComponent,
   SubscriptionsComponent,
+  SubscriptionsNoComponent,
   CreditCardComponent
 ];
 

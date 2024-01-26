@@ -1,10 +1,10 @@
 import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { mainContentAnimation } from '../../app/animations';
 import { SidebarService } from './services/sidebar.service';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { MatSidenav } from '@angular/material/sidenav';
+import { mainContentAnimation } from '../../animations';
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
