@@ -72,6 +72,9 @@
 .mobile-footer {
   display: none;
 }
+.bottom-tab-bar {
+  display: none;
+}
 
 @media (max-width: 767px) {
   .desktop-footer {
@@ -81,6 +84,9 @@
     display: block !important;
   }
   .mat-sidenav-content {
-    height: calc(100vh - 100px) !important;
+    height: calc(100vh - 160px) !important;
+  }
+  .bottom-tab-bar {
+    display: block !important;
   }
 }

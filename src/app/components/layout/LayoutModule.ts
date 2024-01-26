@@ -7,9 +7,10 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/SharedModule';
 import { AngularMaterialModule } from '../../angula-material.module';
 import { FooterComponent } from './footer/footer.component';
+import { BottombarComponent } from './bottombar/bottombar.component';
 
 @NgModule({
-  declarations: [HeaderComponent, SidebarComponent, ToggleSidebarComponent, LayoutComponent,FooterComponent],
+  declarations: [HeaderComponent, SidebarComponent, ToggleSidebarComponent, LayoutComponent,FooterComponent,BottombarComponent],
   imports: [AngularMaterialModule, RouterModule, SharedModule],
   exports: [LayoutComponent]
 })

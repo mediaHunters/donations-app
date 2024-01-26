@@ -1,0 +1,21 @@
+  .bookmark-icon {
+    color: #EDC200;
+  }
+  .bottom-mobile-bar{
+    background-color: #fff;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    height: 60px;
+    transition: padding-left 0.1s ease; /* Define the transition property */
+    bottom: 0;
+    margin-top: auto;
+    position: fixed;
+    z-index: 9999999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  //   margin-left: -100px;
+  }
