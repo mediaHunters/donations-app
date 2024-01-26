@@ -6,9 +6,10 @@ import { LayoutComponent } from './layout.component';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/SharedModule';
 import { AngularMaterialModule } from '../../angula-material.module';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
-  declarations: [HeaderComponent, SidebarComponent, ToggleSidebarComponent, LayoutComponent],
+  declarations: [HeaderComponent, SidebarComponent, ToggleSidebarComponent, LayoutComponent,FooterComponent],
   imports: [AngularMaterialModule, RouterModule, SharedModule],
   exports: [LayoutComponent]
 })

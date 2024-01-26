@@ -7,5 +7,11 @@
 
   <mat-sidenav-content [@onSideNavChange]="!mobileQuery.matches ? sidebarState : null">
     <router-outlet></router-outlet>
+    <div class="mobile-footer">
+      <app-footer></app-footer>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
+<div class="desktop-footer">
+  <app-footer></app-footer>
+</div>
