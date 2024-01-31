@@ -1,0 +1,147 @@
+.login-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    // height: 100vh;
+    // width: calc(100vw - 150px);
+    .login-form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 50px;
+        width: 70%;
+        &.full-width {
+            width: 90%;
+        }
+        .settings-icon {
+            font-size: 30px;
+            width: 40px;
+            height: 40px;
+            color: #EDC200;
+        }
+        .main-heading {
+            font-size: 22px;
+            font-weight: 400;
+            margin: 10px 0px 20px 0px;
+            color: #00164E;
+            letter-spacing: 1px;
+            line-height: 22px
+        }
+        mat-form-field {
+            width: 350px;
+        }
+        .btn-primary {
+            background-color: #000;
+            color: #fff;
+            border-radius: 20px;
+            padding: 20px 30px;
+        }
+        .signup-link {
+            font-size: 18px;
+            letter-spacing: 1px;
+            a {
+                color: #3457BE;
+            }
+        }
+        .data-div {
+            width: 60%;
+            &.full-width {
+                width: 100%;
+            }
+        }
+        .mat-card {
+            margin-bottom: 20px;
+            width: 100%;
+            overflow: hidden;
+            box-shadow: 1px 5px 6px rgba(0, 0, 0, 0.1);
+            // padding: 10px;
+            mat-card-content {
+                padding: 0;
+                display: flex;
+                align-items: flex-start;
+                width: 100%;
+                flex-direction: column;
+                .text-div {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    width: 100%;
+                    h5 {
+                        margin: 0;
+                        margin-top: 10px;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 20px;
+                        letter-spacing: 0.5px;
+                        color: #3457BE;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        max-width: 95%;
+                    }
+                    p {
+                        margin: 0;
+                        margin-top: 10px;
+                        font-weight: 500;
+                        font-size: 11px;
+                        line-height: 16px;
+                        letter-spacing: 0.5px;
+                        color: #000A30;
+                    }
+                }
+                .location-icon {
+                    width: 20px;
+                    height: 20px;
+                    font-size: 18px;
+                    color: #00164E;
+                }
+                .icon-div {
+                    margin-top: 10px;
+                    padding: 10px 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 95%;
+                    p {
+                        margin: 0;
+                        font-weight: 500;
+                        font-size: 11px;
+                        color: #00228A;
+                        line-height: 16px;
+                        margin-left: 10px;
+                    }
+                    .share-icon,.bookmark-icon {
+                        margin-right: 10px;
+                    }
+                    .bookmark-icon {
+                        color: #EDC200;
+                    }
+                    .share-icon {
+                        color: 00164E;
+                    }
+                    .icon-right-div {
+                        display: flex;
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px){
+    .login-form {
+        width: 90% !important;
+        .data-div {
+            width: 95% !important;
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .login-form {
+        width: 100% !important;
+        .data-div {
+            width: 95% !important;
+        }
+    }
+}

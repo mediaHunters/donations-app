@@ -1,0 +1,20 @@
+<app-header></app-header>
+<!-- [@bottomToTop]="mobileQuery.matches ? sidebarState: null" -->
+<mat-sidenav-container class="sidemenu-container">
+  <mat-sidenav #sidenav [mode]="mobileQuery.matches ? 'over' : 'side'" [opened]="isOpened">
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+
+  <mat-sidenav-content [@onSideNavChange]="!mobileQuery.matches ? sidebarState : null">
+    <router-outlet></router-outlet>
+    <div class="mobile-footer">
+      <app-footer></app-footer>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<div class="desktop-footer">
+  <app-footer></app-footer>
+</div>
+<div class="bottom-tab-bar">
+  <app-bottombar></app-bottombar>
+</div>

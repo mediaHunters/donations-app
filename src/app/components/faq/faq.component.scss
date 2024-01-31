@@ -1,0 +1,90 @@
+.login-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    // height: 100vh;
+    // width: calc(100vw - 150px);
+    .login-form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 40px;
+        width: 70%;
+        .settings-icon {
+            font-size: 30px;
+            width: 40px;
+            height: 40px;
+        }
+        .main-heading {
+            font-size: 22px;
+            font-weight: 400;
+            margin: 10px 0px 20px 0px;
+            color: #00164E;
+            letter-spacing: 1px;
+            line-height: 22px
+        }
+        mat-form-field {
+            width: 350px;
+        }
+        .btn-primary {
+            background-color: #000;
+            color: #fff;
+            border-radius: 20px;
+            padding: 20px 30px;
+        }
+        .signup-link {
+            font-size: 18px;
+            letter-spacing: 1px;
+            a {
+                color: #3457BE;
+            }
+        }
+        .data-div {
+            width: 60%;
+            mat-form-field {
+                width: 100%;
+            }
+            .matfield-div {
+                margin-bottom: 48px;
+            }
+        }
+        .mat-expansion-panel {
+            margin-bottom: 5px;
+            box-shadow: none;
+            background: transparent;
+            .mat-expansion-panel-header {
+                border-top: 1px solid #DCE1FF;
+                .mat-expansion-panel-header-title {
+                    font-weight: 400;
+                    font-size: 22px;
+                    line-height: 28px;
+                    color: #3457BE;
+                }
+            }
+            .mat-expansion-panel-body p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: #00164E
+            }
+        }
+    }
+}
+
+@media (max-width: 991px){
+    .login-form {
+        width: 90% !important;
+        .data-div {
+            width: 95% !important;
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .login-form {
+        width: 100% !important;
+        .data-div {
+            width: 95% !important;
+        }
+    }
+}

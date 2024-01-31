@@ -1,0 +1,156 @@
+.login-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    // height: calc(100vh - 100px);
+    // width: calc(100vw - 105px);
+    overflow: auto;
+    .login-form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        // padding-top: 10px;
+        .settings-icon {
+            font-size: 30px;
+            width: 40px;
+            height: 40px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .main-heading {
+            font-size: 22px;
+            font-weight: 400;
+            margin: 10px 0px 20px 0px;
+            color: #00164E;
+            letter-spacing: 1px;
+            line-height: 22px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        mat-form-field {
+            width: 400px;
+        }
+        .data-div {
+            width: 60%;
+            mat-form-field {
+                width: 100%;
+            }
+        }
+        .btn-primary {
+            background-color: #001F24;
+            color: #fff;
+            border-radius: 20px;
+            padding: 20px 30px;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            // margin-left: auto;
+            // margin-right: auto;
+        }
+        .signup-link {
+            font-size: 18px;
+            letter-spacing: 1px;
+            margin: 20px 10px;
+            a {
+                color: #3457BE;
+            }
+        }
+        .title {
+            font-size: 22px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            // margin: 20px 10px;
+            color: #484848;
+            line-height: 28px;
+            margin: 1px 0px 10px 0px;
+        }
+        .title-sub {
+            font-size: 22px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            line-height: 28px;
+            margin: 10px 0px 10px 0px;
+            color: #484848
+        }
+        .example-checkbox {
+            width: 350px;
+            font-size: 12px;
+        }
+        .list-div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            h6 {
+                margin: 0;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 16px;
+                color: black;
+            }
+            p {
+                margin: 0;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 16px;
+                color: black;
+            }
+            .icon-div {
+                display: flex;
+                align-items: center;
+                margin-left: auto;
+                mat-icon {
+                    width: 18px !important;
+                    height: 18px !important; 
+                    font-size: 18px;
+                }
+            }
+        }
+        .title-sub-new {
+            color: #484848;
+            font-family: 400;
+            font-size: 22px;
+            line-height: 28px;
+            margin: 20px 0px;
+        }
+        .btn-primary-new {
+            background-color: #fff;
+            border: 1px solid #BA1A1A;
+            border-radius: 8px;
+            color: #BA1A1A;
+            padding: 20px 30px;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+        .divider-class {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}
+.mat-mdc-standard-chip.mat-primary, .mat-mdc-standard-chip.mat-mdc-chip-highlighted.mat-primary {
+    background: #F7F2FA;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
+    .mdc-evolution-chip__action {
+        background-color: #00164E;
+    }
+    .mdc-evolution-chip__text-label {
+        color: #49454F;
+    }
+}
+
+@media (max-width: 991px){
+    .login-form {
+        width: 90% !important;
+        .data-div {
+            width: 95% !important;
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .login-form {
+        width: 100% !important;
+        .data-div {
+            width: 95% !important;
+        }
+    }
+}

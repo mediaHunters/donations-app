@@ -1,0 +1,205 @@
+.home-container {
+  // background-image: url('../../assets/homepage-first.png');
+  img {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    // max-width: 1816px;
+    height: 100%;
+    max-height: 728px;
+  }
+}
+
+.content {
+  padding: 30px 50px;
+  .main-header {
+    width: 100%;
+    margin-top: 50px;
+    &__wrapper {
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      span {
+        font-weight: 500;
+        font-size: 20px;
+        color: #00164e;
+        line-height: 16px;
+      }
+      .main-header__sub {
+        font-size: 56px;
+        color: var(--material-theme-sys-light-on-primary-container, #00164e);
+        text-align: center;
+        font-family: Roboto;
+        font-size: 57px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 64px;
+        margin: 24px 0 96px 0;
+      }
+    }
+  }
+
+  .sides-container {
+    padding: 100px 40px 100px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    &__content {
+      padding: 40px 40px;
+      h2 {
+        color: var(--material-theme-sys-light-on-primary-container, #00164e);
+        font-family: Roboto;
+        font-size: 57px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 64px;
+      }
+      p {
+        max-width: 722px;
+        width: 100%;
+        color: var(--material-theme-sys-light-on-primary-container, #00164e);
+        font-family: Roboto;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+        align-self: stretch;
+      }
+    }
+  }
+
+  .dotations-description {
+    padding: 128px 0;
+    &__header {
+      color: var(--material-theme-sys-light-on-primary-container, #00164e);
+      font-family: Roboto;
+      font-size: 57px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 64px;
+    }
+    &__wrapper {
+      &__content {
+        padding: 40px 80px;
+        padding-left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        p {
+          max-width: 772px;
+          &:first-child {
+            margin-right: 64px;
+          }
+        }
+      }
+      &__icons-list {
+        display: flex;
+        margin-top: 96px;
+        img {
+          width: 128px;
+          height: 128px;
+          flex-shrink: 0;
+          border-radius: 24px;
+          &:not(:last-child) {
+            margin-right: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  .register {
+    width: 100%;
+    margin: 128px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__hero-image {
+      img {
+        width: 128px;
+        height: 128px;
+        border-radius: 96px;
+      }
+    }
+    &__first-row {
+      color: var(--material-theme-sys-light-on-primary-container, #00164e);
+      text-align: center;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 400;
+      h2 {
+        font-size: 57px;
+        line-height: 64px;
+        padding-bottom: 24px;
+      }
+      p {
+        font-size: 16px;
+        padding: 0;
+        line-height: 24px;
+      }
+    }
+
+    &__second-row {
+      display: flex;
+      justify-content: center;
+      margin-top: 24px;
+      app-button:first-child {
+        margin-right: 10px;
+      }
+    }
+
+    &__third-row {
+      display: flex;
+      margin-top: 38px;
+      mat-icon {
+        margin-right: 12px;
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  .faq-button {
+    display: flex;
+    height: 64px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    align-self: stretch;
+    app-button {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  img {
+    width: 100%;
+  }
+  .content {
+    padding: 10px 20px;
+    .dotations-description__wrapper__content {
+      flex-direction: column;
+      padding: 10px;
+    }
+  }
+  .sides-container {
+    flex-wrap: wrap;
+  }
+  .dotations-description__wrapper__icons-list {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    img {
+      margin-bottom: 24px;
+    }
+  }
+}

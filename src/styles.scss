@@ -44,3 +44,26 @@ body {
   font-family: Roboto, 'Helvetica Neue', sans-serif;
   overflow: hidden;
 }
+
+
+
+// Angular Material Design
+
+.mat-mdc-text-field-wrapper.mdc-text-field {
+  background-color: #E6E0E9 !important;
+}
+.mat-form-field-color .mat-mdc-text-field-wrapper.mdc-text-field {
+  background-color: unset !important;
+}
+.mat-mdc-select-panel {
+  background-color: #F3EDF7 !important;
+  padding: 0px !important;
+}
+.mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled) .mdc-evolution-chip__text-label,
+.mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled) .mdc-evolution-chip__checkmark {
+  color: #49454F !important;
+}
+.mdc-checkbox .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background, .mdc-checkbox .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background, .mdc-checkbox .mdc-checkbox__native-control[data-indeterminate=true]:enabled~.mdc-checkbox__background {
+  border-color: #6750A4 !important;
+  background-color: #6750A4 !important;
+}
