@@ -69,6 +69,10 @@
                         line-height: 20px;
                         letter-spacing: 0.5px;
                         color: #3457BE;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        max-width: 95%;
                     }
                     p {
                         margin: 0;

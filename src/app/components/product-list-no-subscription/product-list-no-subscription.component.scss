@@ -192,15 +192,20 @@
 }
 
 @media (max-width: 991px) {
+  .main-wrapper {
+    flex-direction: column;
+  }
   .top-div {
     justify-content: center !important;
     align-items: center !important;
   }
   .left-box {
     width: 100% !important;
+    order: 2;
   }
   .right-box {
-    display: none;
+    width: 100% !important;
+    order: 1;
   }
   .left-side-main-div {
     align-items: center;
