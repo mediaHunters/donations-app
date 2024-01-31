@@ -36,7 +36,7 @@ const COMPONENTS = [
 
 @NgModule({
   declarations: [...COMPONENTS],
-  imports: [RouterModule, BrowserModule, LayoutModule, AngularMaterialModule, SharedModule,NgxMasonryModule],
+  imports: [RouterModule, BrowserModule, LayoutModule, AngularMaterialModule, SharedModule, NgxMasonryModule],
   exports: [...COMPONENTS, LayoutModule],
 })
 export default class ComponentModule { }
