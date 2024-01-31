@@ -17,7 +17,7 @@ import LayoutModule from './layout/LayoutModule';
 import { ProductListNoSubscriptionComponent } from './product-list-no-subscription/product-list-no-subscription.component';
 import { SubscriptionsNoComponent } from './account/subscriptions-no/subscriptions-no.component';
 import { ProductListNoAccountComponent } from './product-list-no-account/product-list-no-account.component';
-
+import { NgxMasonryModule } from 'ngx-masonry';
 const COMPONENTS = [
   HomeComponent,
   LoginComponent,
@@ -36,7 +36,7 @@ const COMPONENTS = [
 
 @NgModule({
   declarations: [...COMPONENTS],
-  imports: [RouterModule, BrowserModule, LayoutModule, AngularMaterialModule, SharedModule],
+  imports: [RouterModule, BrowserModule, LayoutModule, AngularMaterialModule, SharedModule,NgxMasonryModule],
   exports: [...COMPONENTS, LayoutModule],
 })
 export default class ComponentModule { }
