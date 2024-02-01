@@ -2,6 +2,11 @@
   display: flex;
   // height: 100vh;
   // width: calc(100vw - 150px);
+  .main-form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
   .left-box {
     width: 35%;
     padding: 10px;
@@ -143,9 +148,9 @@
       font-weight: 400;
       margin-top: 20px;
       color: #3457be;
-      // white-space: nowrap; /* Prevents text from wrapping to the next line */
-      // overflow: hidden; /* Hides any content that overflows the container */
-      // text-overflow: ellipsis;
+      white-space: nowrap; /* Prevents text from wrapping to the next line */
+      overflow: hidden; /* Hides any content that overflows the container */
+      text-overflow: ellipsis;
     }
     .subtitle-text {
       font-size: 16px;
@@ -155,6 +160,9 @@
       margin: 0;
       margin-top: 15px;
       color: #00164e;
+      white-space: nowrap; /* Prevents text from wrapping to the next line */
+      overflow: hidden; /* Hides any content that overflows the container */
+      text-overflow: ellipsis;
     }
     .description {
       font-size: 12px;
@@ -164,6 +172,9 @@
       margin: 0;
       margin-top: 15px;
       color: #00164e;
+      white-space: nowrap; /* Prevents text from wrapping to the next line */
+      overflow: hidden; /* Hides any content that overflows the container */
+      text-overflow: ellipsis;
     }
   }
 }
@@ -182,6 +193,9 @@
 
 @media (max-width: 991px) {
   .main-wrapper {
+    flex-wrap: wrap;
+  }
+  .main-form {
     flex-wrap: wrap;
   }
   .left-box {
