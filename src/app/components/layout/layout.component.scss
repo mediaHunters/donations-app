@@ -89,4 +89,7 @@
   .bottom-tab-bar {
     display: block !important;
   }
+  .sidemenu-container.opennav {
+    z-index: 99999999;
+  }
 }

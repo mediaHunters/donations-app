@@ -1,6 +1,6 @@
 <app-header></app-header>
 <!-- [@bottomToTop]="mobileQuery.matches ? sidebarState: null" -->
-<mat-sidenav-container class="sidemenu-container">
+<mat-sidenav-container class="sidemenu-container" [ngClass]="{'opennav': sidenav.opened}">
   <mat-sidenav #sidenav [mode]="mobileQuery.matches ? 'over' : 'side'" [opened]="isOpened">
     <app-sidebar></app-sidebar>
   </mat-sidenav>

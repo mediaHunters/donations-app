@@ -15,7 +15,7 @@ import { iconAnimation, labelAnimation, sidebarAnimation } from '../../../animat
 })
 export class SidebarComponent implements OnInit {
   sidebarState!: string;
-
+  panelOpenState: boolean = false;
   constructor(
     private sidebarService: SidebarService,
   ) { }
