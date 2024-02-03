@@ -59,6 +59,9 @@ body {
   background-color: #F3EDF7 !important;
   padding: 0px !important;
 }
+.mat-form-field-color .mat-mdc-select-panel {
+  background-color: unset !important;
+}
 .mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled) .mdc-evolution-chip__text-label,
 .mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled) .mdc-evolution-chip__checkmark {
   color: #49454F !important;
