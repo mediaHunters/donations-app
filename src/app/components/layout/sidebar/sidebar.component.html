@@ -112,7 +112,7 @@
       <mat-expansion-panel (opened)="panelOpenState = true"
                            (closed)="panelOpenState = false">
         <mat-expansion-panel-header style="padding: 0px;">
-          <mat-panel-title>
+          <!-- <mat-panel-title>
             <mat-icon
         color="primary"
         [@iconAnimation]="sidebarState"
@@ -121,7 +121,33 @@
       </mat-icon>
 
       <span class="label" [@labelAnimation]="sidebarState">Account</span>
-          </mat-panel-title>
+          </mat-panel-title> -->
+          <a
+          style="padding: 0;"
+      mat-list-item
+      routerLinkActive="active-list-item"
+      routerLink="faq"
+      title="help"
+      [ngClass]="
+        sidebarState === 'close'
+          ? 'mdc-list-item__content--closed'
+          : 'mdc-list-item__content--opened'
+      ">
+      @if (sidebarState === 'open') {
+          <mat-icon color="primary" [@iconAnimation]="sidebarState"
+          >account_circle</mat-icon
+        >
+        <span class="label" [@labelAnimation]="sidebarState">Account</span>
+        <!-- <span class="counter">2</span> -->
+
+      } @else {
+        <mat-icon color="primary" [@iconAnimation]="sidebarState"
+        >account_circle</mat-icon
+      >
+      <span class="label" [@labelAnimation]="sidebarState">Account</span>
+      }
+
+    </a>
           <!-- <mat-panel-description>
             Currently I am {{panelOpenState ? 'open' : 'closed'}}
           </mat-panel-description> -->
@@ -203,8 +229,9 @@
     </a>
       </mat-expansion-panel>
     </a>
-    <mat-list-item>
-      
+    <mat-list-item *ngIf="mobileQuery.matches">
+        <p>Legal Text Header</p>
     </mat-list-item>
+    <app-footer *ngIf="mobileQuery.matches"></app-footer>
   </mat-nav-list>
 </div>
