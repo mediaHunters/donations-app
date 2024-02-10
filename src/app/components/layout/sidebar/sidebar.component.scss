@@ -24,3 +24,34 @@
     right: 18px;
   }
 }
+::ng-deep {
+  .mdc-list-item:hover::before {
+    background-color: transparent !important;
+  }
+  .mat-expansion-panel:not([class*=mat-elevation-z]) {
+    box-shadow: none !important;
+  }
+}
+.custom-header {
+  padding: 0px 20px !important;
+  border-radius: 40px;
+  &.mat-expanded {
+    background-color: #E8DEF8 !important;
+  }
+}
+::ng-deep .mat-expanison {
+  width: 100%;
+  padding: 5px 6px !important;
+  .mdc-list-item__content,.mdc-list-item__primary-text {
+    width: 100%;
+  }
+}
+.mat-expansion-panel {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .sidebar_menu {
+    width: 100% !important;
+  }
+}

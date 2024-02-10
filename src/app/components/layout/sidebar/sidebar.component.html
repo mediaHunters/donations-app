@@ -5,19 +5,14 @@
       routerLinkActive="active-list-item"
       routerLink="search"
       title="account"
-      [ngClass]="
-        sidebarState === 'close'
-          ? 'mdc-list-item__content--closed'
-          : 'mdc-list-item__content--opened'
-      ">
+      [ngClass]="sidebarState === 'close' ? 'mdc-list-item__content--closed' : 'mdc-list-item__content--opened'"
+    >
       @if (sidebarState === 'open') {
         <mat-icon [@iconAnimation]="sidebarState">search</mat-icon>
         <span class="label" [@labelAnimation]="sidebarState">Wyszukaj</span>
       } @else {
         <div class="blue-square-icon">
-          <mat-icon [@iconAnimation]="sidebarState" class="white-icon"
-            >search</mat-icon
-          >
+          <mat-icon [@iconAnimation]="sidebarState" class="white-icon">search</mat-icon>
         </div>
       }
     </a>
@@ -27,22 +22,15 @@
       routerLinkActive="active-list-item"
       routerLink="best-choices"
       title="account"
-      [ngClass]="
-        sidebarState === 'close'
-          ? 'mdc-list-item__content--closed'
-          : 'mdc-list-item__content--opened'
-      ">
+      [ngClass]="sidebarState === 'close' ? 'mdc-list-item__content--closed' : 'mdc-list-item__content--opened'"
+    >
       @if (sidebarState === 'open') {
-          <mat-icon
-          svgIcon="double-circles-icon"
-          [@iconAnimation]="sidebarState"></mat-icon>
+        <mat-icon svgIcon="double-circles-icon" [@iconAnimation]="sidebarState"></mat-icon>
         <span class="label" [@labelAnimation]="sidebarState">Best for you</span>
         <span class="counter">3 nowe</span>
       } @else {
         <div class="bgc-radius-icon-lavender-blue">
-          <mat-icon
-            svgIcon="double-circles-icon"
-            [@iconAnimation]="sidebarState"></mat-icon>
+          <mat-icon svgIcon="double-circles-icon" [@iconAnimation]="sidebarState"></mat-icon>
         </div>
 
         <span class="label" [@labelAnimation]="sidebarState">Best for you</span>
@@ -54,14 +42,9 @@
       routerLinkActive="active-list-item"
       routerLink="bookmarks"
       title="account"
-      [ngClass]="
-        sidebarState === 'close'
-          ? 'mdc-list-item__content--closed'
-          : 'mdc-list-item__content--opened'
-      ">
-      <mat-icon class="yellow-icon" [@iconAnimation]="sidebarState">
-        bookmark
-      </mat-icon>
+      [ngClass]="sidebarState === 'close' ? 'mdc-list-item__content--closed' : 'mdc-list-item__content--opened'"
+    >
+      <mat-icon class="yellow-icon" [@iconAnimation]="sidebarState"> bookmark </mat-icon>
 
       <span class="label" [@labelAnimation]="sidebarState">Bookmarks</span>
     </a>
@@ -70,25 +53,16 @@
       routerLinkActive="active-list-item"
       routerLink="faq"
       title="help"
-      [ngClass]="
-        sidebarState === 'close'
-          ? 'mdc-list-item__content--closed'
-          : 'mdc-list-item__content--opened'
-      ">
+      [ngClass]="sidebarState === 'close' ? 'mdc-list-item__content--closed' : 'mdc-list-item__content--opened'"
+    >
       @if (sidebarState === 'open') {
-          <mat-icon color="primary" [@iconAnimation]="sidebarState"
-          >help_outline</mat-icon
-        >
+        <mat-icon color="primary" [@iconAnimation]="sidebarState">help_outline</mat-icon>
         <span class="label" [@labelAnimation]="sidebarState">FAQ</span>
         <span class="counter">2</span>
-
       } @else {
-        <mat-icon color="primary" [@iconAnimation]="sidebarState"
-        >help_outline</mat-icon
-      >
-      <span class="label" [@labelAnimation]="sidebarState">FAQ</span>
+        <mat-icon color="primary" [@iconAnimation]="sidebarState">help_outline</mat-icon>
+        <span class="label" [@labelAnimation]="sidebarState">FAQ</span>
       }
-
     </a>
 
     <a
@@ -96,11 +70,9 @@
       routerLinkActive="active-list-item"
       routerLink="account"
       title="account"
-      [ngClass]="
-        sidebarState === 'close'
-          ? 'mdc-list-item__content--closed'
-          : 'mdc-list-item__content--opened'
-      ">
+      class="mat-expanison"
+      [ngClass]="sidebarState === 'close' ? 'mdc-list-item__content--closed' : 'mdc-list-item__content--opened'"
+    >
       <!-- <mat-icon
         color="primary"
         [@iconAnimation]="sidebarState"
@@ -109,9 +81,11 @@
       </mat-icon>
 
       <span class="label" [@labelAnimation]="sidebarState">Konto</span> -->
-      <mat-expansion-panel (opened)="panelOpenState = true"
-                           (closed)="panelOpenState = false">
-        <mat-expansion-panel-header style="padding: 0px;">
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header 
+        class="custom-header"
+        [ngClass]="sidebarState === 'close' ? 'mdc-list-item__content--closed' : 'mdc-list-item__content--opened'"
+         style="padding: 0px">
           <!-- <mat-panel-title>
             <mat-icon
         color="primary"
@@ -123,114 +97,78 @@
       <span class="label" [@labelAnimation]="sidebarState">Account</span>
           </mat-panel-title> -->
           <a
-          style="padding: 0;"
-      mat-list-item
-      routerLinkActive="active-list-item"
-      routerLink="faq"
-      title="help"
-      [ngClass]="
-        sidebarState === 'close'
-          ? 'mdc-list-item__content--closed'
-          : 'mdc-list-item__content--opened'
-      ">
-      @if (sidebarState === 'open') {
-          <mat-icon color="primary" [@iconAnimation]="sidebarState"
-          >account_circle</mat-icon
-        >
-        <span class="label" [@labelAnimation]="sidebarState">Account</span>
-        <!-- <span class="counter">2</span> -->
-
-      } @else {
-        <mat-icon color="primary" [@iconAnimation]="sidebarState"
-        >account_circle</mat-icon
-      >
-      <span class="label" [@labelAnimation]="sidebarState">Account</span>
-      }
-
-    </a>
+            style="padding: 0"
+            mat-list-item
+            routerLinkActive="active-list-item"
+            routerLink="faq"
+            title="help"
+            [ngClass]="sidebarState === 'close' ? 'mdc-list-item__content--closed' : 'mdc-list-item__content--opened'"
+          >
+            @if (sidebarState === 'open') {
+              <mat-icon color="primary" [@iconAnimation]="sidebarState">account_circle</mat-icon>
+              <span class="label" [@labelAnimation]="sidebarState">Account</span>
+              <!-- <span class="counter">2</span> -->
+            } @else {
+              <mat-icon color="primary" [@iconAnimation]="sidebarState">account_circle</mat-icon>
+              <span class="label" [@labelAnimation]="sidebarState">Account</span>
+            }
+          </a>
           <!-- <mat-panel-description>
             Currently I am {{panelOpenState ? 'open' : 'closed'}}
           </mat-panel-description> -->
         </mat-expansion-panel-header>
         <a
-      mat-list-item
-      routerLinkActive="active-list-item"
-      routerLink="faq"
-      title="help"
-      [ngClass]="
-        sidebarState === 'close'
-          ? 'mdc-list-item__content--closed'
-          : 'mdc-list-item__content--opened'
-      ">
-      @if (sidebarState === 'open') {
-          <mat-icon color="primary" [@iconAnimation]="sidebarState"
-          >settings</mat-icon
+          mat-list-item
+          routerLinkActive="active-list-item"
+          routerLink="faq"
+          title="help"
+          [ngClass]="sidebarState === 'close' ? 'mdc-list-item__content--closed' : 'mdc-list-item__content--opened'"
         >
-        <span class="label" [@labelAnimation]="sidebarState">User Settings</span>
-        <!-- <span class="counter">2</span> -->
-
-      } @else {
-        <mat-icon color="primary" [@iconAnimation]="sidebarState"
-        >settings</mat-icon
-      >
-      <span class="label" [@labelAnimation]="sidebarState">User Settings</span>
-      }
-
-    </a>
-    <a
-      mat-list-item
-      routerLinkActive="active-list-item"
-      routerLink="faq"
-      title="help"
-      [ngClass]="
-        sidebarState === 'close'
-          ? 'mdc-list-item__content--closed'
-          : 'mdc-list-item__content--opened'
-      ">
-      @if (sidebarState === 'open') {
-          <mat-icon color="primary" [@iconAnimation]="sidebarState"
-          >help_outline</mat-icon
+          @if (sidebarState === 'open') {
+            <mat-icon color="primary" [@iconAnimation]="sidebarState">settings</mat-icon>
+            <span class="label" [@labelAnimation]="sidebarState">User Settings</span>
+            <!-- <span class="counter">2</span> -->
+          } @else {
+            <mat-icon color="primary" [@iconAnimation]="sidebarState">settings</mat-icon>
+            <span class="label" [@labelAnimation]="sidebarState">User Settings</span>
+          }
+        </a>
+        <a
+          mat-list-item
+          routerLinkActive="active-list-item"
+          routerLink="faq"
+          title="help"
+          [ngClass]="sidebarState === 'close' ? 'mdc-list-item__content--closed' : 'mdc-list-item__content--opened'"
         >
-        <span class="label" [@labelAnimation]="sidebarState">Subscriptions</span>
-        <!-- <span class="counter">2</span> -->
-
-      } @else {
-        <mat-icon color="primary" [@iconAnimation]="sidebarState"
-        >help_outline</mat-icon
-      >
-      <span class="label" [@labelAnimation]="sidebarState">Subscriptions</span>
-      }
-
-    </a>
-    <a
-      mat-list-item
-      routerLinkActive="active-list-item"
-      routerLink="faq"
-      title="help"
-      [ngClass]="
-        sidebarState === 'close'
-          ? 'mdc-list-item__content--closed'
-          : 'mdc-list-item__content--opened'
-      ">
-      @if (sidebarState === 'open') {
-          <mat-icon color="primary" [@iconAnimation]="sidebarState"
-          >help</mat-icon
+          @if (sidebarState === 'open') {
+            <mat-icon color="primary" [@iconAnimation]="sidebarState">help_outline</mat-icon>
+            <span class="label" [@labelAnimation]="sidebarState">Subscriptions</span>
+            <!-- <span class="counter">2</span> -->
+          } @else {
+            <mat-icon color="primary" [@iconAnimation]="sidebarState">help_outline</mat-icon>
+            <span class="label" [@labelAnimation]="sidebarState">Subscriptions</span>
+          }
+        </a>
+        <a
+          mat-list-item
+          routerLinkActive="active-list-item"
+          routerLink="faq"
+          title="help"
+          [ngClass]="sidebarState === 'close' ? 'mdc-list-item__content--closed' : 'mdc-list-item__content--opened'"
         >
-        <span class="label" [@labelAnimation]="sidebarState">Credit Card</span>
-        <!-- <span class="counter">2</span> -->
-
-      } @else {
-        <mat-icon color="primary" [@iconAnimation]="sidebarState"
-        >help</mat-icon
-      >
-      <span class="label" [@labelAnimation]="sidebarState">Credit Card</span>
-      }
-
-    </a>
+          @if (sidebarState === 'open') {
+            <mat-icon color="primary" [@iconAnimation]="sidebarState">help</mat-icon>
+            <span class="label" [@labelAnimation]="sidebarState">Credit Card</span>
+            <!-- <span class="counter">2</span> -->
+          } @else {
+            <mat-icon color="primary" [@iconAnimation]="sidebarState">help</mat-icon>
+            <span class="label" [@labelAnimation]="sidebarState">Credit Card</span>
+          }
+        </a>
       </mat-expansion-panel>
     </a>
     <mat-list-item *ngIf="mobileQuery.matches">
-        <p>Legal Text Header</p>
+      <p>Legal Text Header</p>
     </mat-list-item>
     <app-footer *ngIf="mobileQuery.matches"></app-footer>
   </mat-nav-list>

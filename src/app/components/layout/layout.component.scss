@@ -75,6 +75,9 @@
 .bottom-tab-bar {
   display: none;
 }
+.mat-sidenav.mat-drawer-over {
+  width: 100% !important;
+}
 
 @media (max-width: 767px) {
   .desktop-footer {
