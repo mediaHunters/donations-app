@@ -9,7 +9,7 @@
     padding-bottom: 20px;
     height: 60px;
     transition: padding-left 0.1s ease; /* Define the transition property */
-    bottom: 0;
+    bottom: 60px;
     margin-top: auto;
     position: fixed;
     z-index: 9999999;
@@ -17,5 +17,9 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    h5 {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
   //   margin-left: -100px;
   }
