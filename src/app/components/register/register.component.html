@@ -1,16 +1,16 @@
 <div class="login-wrapper">
-    <form class="login-form">
+    <form class="login-form" [formGroup]="loginForm">
       <mat-icon svgIcon="double-circles-icon" class="home-icon"></mat-icon>
       <h5 class="main-heading">Register Form</h5>
       <div class="data-div">
 
       <mat-form-field appearance="fill">
         <mat-label>First Name</mat-label>
-        <input type="text" matInput placeholder="Placeholder" />
+        <input type="text" formControlName="name" matInput placeholder="Placeholder" />
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Last Name</mat-label>
-        <input type="text" matInput placeholder="Placeholder" />
+        <input type="text" formControlName="surname" matInput placeholder="Placeholder" />
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Role</mat-label>
@@ -22,16 +22,16 @@
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Email</mat-label>
-        <input type="email" matInput placeholder="Placeholder" />
+        <input type="email" formControlName="email" matInput placeholder="Placeholder" />
         <mat-icon class="material-icons-outlined" matSuffix>cancel</mat-icon>
       </mat-form-field>
       <mat-form-field appearance="fill">
-        <mat-label>Last Name</mat-label>
-        <input type="text" matInput placeholder="Placeholder" />
+        <mat-label>Phone Number</mat-label>
+        <input type="tel" formControlName="phone" matInput placeholder="Placeholder" />
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Password</mat-label>
-        <input type="password" matInput placeholder="Placeholder" />
+        <input type="password" formControlName="password" matInput placeholder="Placeholder" />
         <mat-icon class="material-icons-outlined" matSuffix>cancel</mat-icon>
       </mat-form-field>
       <h6 class="signup-link">Already have an account? <a>Login Now</a></h6>
@@ -52,7 +52,7 @@
           </div>
         </div>
       </div>
-      <button type="submit" mat-raised-button class="btn btn-primary btn-sm btn-block">Register</button>
+      <button type="button" (click)="saveForm()" mat-raised-button class="btn btn-primary btn-sm btn-block">Register</button>
       </div>
     </form>
   </div>  

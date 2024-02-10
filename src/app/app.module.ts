@@ -9,6 +9,8 @@ import { MatIconRegistry } from '@angular/material/icon';
 import { loadCustomSvgResources } from './custom-icons';
 import { RouterModule } from '@angular/router';
 import ComponentModule from './components/ComponentModule';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,10 @@ import ComponentModule from './components/ComponentModule';
     BrowserAnimationsModule,
     AngularMaterialModule,
     RouterModule,
-    ComponentModule
+    ComponentModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [provideAnimations()],
   bootstrap: [AppComponent]
