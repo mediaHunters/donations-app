@@ -14,6 +14,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 const COMPONENTS = [
     MatToolbarModule,
     MatSidenavModule,
@@ -32,7 +33,8 @@ const COMPONENTS = [
     MatChipsModule,
     MatCardModule,
     MatExpansionModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatSnackBarModule
 ]
 
 @NgModule({

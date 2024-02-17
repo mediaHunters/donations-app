@@ -70,3 +70,7 @@ body {
   border-color: #6750A4 !important;
   background-color: #6750A4 !important;
 }
+
+.cdk-overlay-container {
+  z-index: 10000000 !important;
+}

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from '../../services/api.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -9,7 +11,8 @@ import { ApiService } from '../../services/api.service';
 })
 export class RegisterComponent implements OnInit {
   loginForm!: FormGroup;
-  constructor(private formbuilder: FormBuilder,private api: ApiService) {
+  constructor(private formbuilder: FormBuilder,private api: ApiService,
+    private router: Router,private _snackBar: MatSnackBar) {
     this.loginForm = this.formbuilder.group({
       name: ['',[Validators.required]],
       surname: ['',[Validators.required]],
@@ -39,7 +42,15 @@ export class RegisterComponent implements OnInit {
       password: this.f['password'].value
     }
     this.api.register(body).subscribe((res) => {
-
+      this._snackBar.open('Register Successfully','OKAY', {
+        duration: 3000
+      });
+      this.router.navigate(['/register']);
+    },(err) => {
+      console.log('1111111111')
+      this._snackBar.open(err.error?.message ?? 'Something Went Wrong','OKAY', {
+        duration: 3000
+      });
     })
   }
 }
