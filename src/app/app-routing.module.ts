@@ -13,44 +13,46 @@ import { RegisterComponent } from './components/register/register.component';
 import { ProductListNoSubscriptionComponent } from './components/product-list-no-subscription/product-list-no-subscription.component';
 import { SubscriptionsNoComponent } from './components/account/subscriptions-no/subscriptions-no.component';
 import { ProductListNoAccountComponent } from './components/product-list-no-account/product-list-no-account.component';
+import { AuthGuard } from './auth.guard';
+import { LoginauthGuard } from './loginauth.guard';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/products', pathMatch: 'full' },
   {
-    path: 'login', component: LoginComponent
+    path: 'login', component: LoginComponent, canActivate: [LoginauthGuard]
   },
   {
-    path: 'register', component: RegisterComponent
+    path: 'register', component: RegisterComponent, canActivate: [LoginauthGuard]
   },
   {
-    path: 'products', component: ProductListComponent
+    path: 'products', component: ProductListComponent, canActivate: [AuthGuard]
   },
   {
-    path: 'products-no-subscription', component: ProductListNoSubscriptionComponent
+    path: 'products-no-subscription', component: ProductListNoSubscriptionComponent, canActivate: [AuthGuard]
   },
   {
-    path: 'products-no-account', component: ProductListNoAccountComponent
+    path: 'products-no-account', component: ProductListNoAccountComponent, canActivate: [AuthGuard]
   },
   {
-    path: 'product-detail', component: ProductDetailComponent
+    path: 'product-detail', component: ProductDetailComponent, canActivate: [AuthGuard]
   },
   {
-    path: 'faq',component: FaqComponent
+    path: 'faq', component: FaqComponent, canActivate: [AuthGuard]
   },
   {
-    path: 'bookmarks', component: BookmarksComponent
+    path: 'bookmarks', component: BookmarksComponent, canActivate: [AuthGuard]
   },
   {
-    path: 'user-settings',component: UserSettingsComponent
+    path: 'user-settings', component: UserSettingsComponent, canActivate: [AuthGuard]
   },
   {
-    path: 'subscriptions',component: SubscriptionsComponent
+    path: 'subscriptions', component: SubscriptionsComponent, canActivate: [AuthGuard]
   },
   {
-    path: 'subscriptions-no',component: SubscriptionsNoComponent
+    path: 'subscriptions-no', component: SubscriptionsNoComponent, canActivate: [AuthGuard]
   },
   {
-    path: 'credit-card',component: CreditCardComponent
+    path: 'credit-card', component: CreditCardComponent, canActivate: [AuthGuard]
   },
   { path: '**', component: HomeComponent }
 ];

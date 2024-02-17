@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ApiService } from '../../services/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,8 @@ import { ApiService } from '../../services/api.service';
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
-  constructor(private formbuilder: FormBuilder,private api: ApiService) {
+  constructor(private formbuilder: FormBuilder,private api: ApiService,
+    private router: Router) {
     this.loginForm = this.formbuilder.group({
       email: ['',[Validators.required,Validators.email]],
       password: ['', [Validators.required,Validators.minLength(6)]]
@@ -32,6 +34,7 @@ export class LoginComponent implements OnInit {
     }
     this.api.login(body).subscribe((res: any) => {
       localStorage.setItem('token',res.token);
+      this.router.navigate(['/products']);
     })
   }
 
