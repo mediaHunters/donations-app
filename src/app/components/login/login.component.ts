@@ -27,11 +27,11 @@ export class LoginComponent implements OnInit {
       return
     }
     let body = {
-      email: this.f['email'].value,
+      username: this.f['email'].value,
       password: this.f['password'].value
     }
-    this.api.login(body).subscribe((res) => {
-
+    this.api.login(body).subscribe((res: any) => {
+      localStorage.setItem('token',res.token);
     })
   }
 
