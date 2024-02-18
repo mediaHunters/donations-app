@@ -79,3 +79,10 @@ body {
   outline: none !important; /* Remove default focus outline */
   background-color: #e0e0e0 !important; /* Change the background color when focused */
 }
+
+.mat-expansion-panel-header {
+  background-color: transparent !important; /* Remove highlight color */
+}
+.mat-mdc-list-item .mat-ripple-element{
+  background-color: transparent !important;
+}
