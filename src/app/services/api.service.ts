@@ -15,4 +15,11 @@ export class ApiService {
   login(body: any) {
     return this.http.post(this.APIURL + 'login', body)
   }
+
+  refreshToken() {
+    let body = {
+      
+    }
+    return this.http.post(this.APIURL + 'refresh-token', body)
+  }
 }

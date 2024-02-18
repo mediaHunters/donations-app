@@ -6,7 +6,7 @@ export const AuthGuard: CanActivateFn = (route, state) => {
   if (!isAuthenticated) {
     // If not authenticated, redirect to the login page or any other page
     
-    return inject(Router).createUrlTree(['/login']);;
+    return inject(Router).createUrlTree(['/login']);
   }
 
   // If authenticated, allow access

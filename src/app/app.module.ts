@@ -9,8 +9,9 @@ import { MatIconRegistry } from '@angular/material/icon';
 import { loadCustomSvgResources } from './custom-icons';
 import { RouterModule } from '@angular/router';
 import ComponentModule from './components/ComponentModule';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TokenInterceptor } from './interceptor/http-interceptor.interceptor';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [provideAnimations()],
+  providers: [
+    provideAnimations(),
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

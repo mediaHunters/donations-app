@@ -1,21 +1,40 @@
 <div class="login-wrapper">
   <form class="login-form" [formGroup]="loginForm">
-    <mat-icon class="settings-icon material-icons-outlined" aria-hidden="false" aria-label="Example home icon" fontIcon="settings"></mat-icon>
+    <mat-icon
+      class="settings-icon material-icons-outlined"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      fontIcon="settings"
+    ></mat-icon>
     <h5 class="main-heading">Login Form</h5>
     <div class="data-div">
-
-    <mat-form-field appearance="fill">
-      <mat-label>Email</mat-label>
-      <input formControlName="email" type="email" matInput placeholder="Placeholder" />
-      <mat-icon class="material-icons-outlined" matSuffix>cancel</mat-icon>
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-      <mat-label>Password</mat-label>
-      <input formControlName="password" type="password" matInput placeholder="Placeholder" />
-      <mat-icon class="material-icons-outlined" matSuffix>visibility</mat-icon>
-    </mat-form-field>
-    <h6 class="signup-link">Don't have account? <a [routerLink]="'/register'" style="cursor: pointer;">Signup Now</a></h6>
-    <button (click)="saveForm()" type="button" mat-raised-button class="btn btn-primary btn-sm btn-block">Login</button>
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input formControlName="email" type="email" matInput placeholder="Email" />
+        <mat-icon class="material-icons-outlined" matSuffix>cancel</mat-icon>
+        <mat-error *ngIf="f['email'].invalid && (f['email'].dirty || f['email'].touched)">
+          Email is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input
+          formControlName="password"
+          [type]="showPassword ? 'text' : 'password'"
+          matInput
+          placeholder="Password"
+        />
+        <mat-icon (click)="passwordToggle()" class="material-icons-outlined" matSuffix>visibility</mat-icon>
+        <mat-error *ngIf="f['password'].invalid && (f['password'].dirty || f['password'].touched)">
+          Password is required
+        </mat-error>
+      </mat-form-field>
+      <h6 class="signup-link">
+        Don't have account? <a [routerLink]="'/register'" style="cursor: pointer">Signup Now</a>
+      </h6>
+      <button (click)="saveForm()" type="submit" mat-raised-button class="btn btn-primary btn-sm btn-block">
+        Login
+      </button>
     </div>
   </form>
 </div>

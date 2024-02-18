@@ -11,26 +11,31 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
   loginForm!: FormGroup;
-  constructor(private formbuilder: FormBuilder,private api: ApiService,
-    private router: Router,private _snackBar: MatSnackBar) {
+  showPassword: boolean = false;
+  constructor(private formbuilder: FormBuilder, private api: ApiService,
+    private router: Router, private _snackBar: MatSnackBar) {
     this.loginForm = this.formbuilder.group({
-      name: ['',[Validators.required]],
-      surname: ['',[Validators.required]],
-      phone: ['',[Validators.required]],
-      email: ['',[Validators.required,Validators.email]],
-      password: ['', [Validators.required,Validators.minLength(6)]],
-      vovoidship: ['',[Validators.required]]
+      name: ['', [Validators.required]],
+      surname: ['', [Validators.required]],
+      phone: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+      vovoidship: ['', [Validators.required]]
     });
   }
   ngOnInit(): void {
   }
 
-  get f(){
+  get f() {
     return this.loginForm.controls;
   }
 
+  passwordToggle() {
+    this.showPassword = !this.showPassword;
+  }
+
   saveForm() {
-    if(this.loginForm.invalid) {
+    if (this.loginForm.invalid) {
       return
     }
     let body = {
@@ -41,16 +46,33 @@ export class RegisterComponent implements OnInit {
       vovoidship: this.f['vovoidship'].value,
       password: this.f['password'].value
     }
-    this.api.register(body).subscribe((res) => {
-      this._snackBar.open('Register Successfully','OKAY', {
-        duration: 3000
-      });
-      this.router.navigate(['/register']);
-    },(err) => {
-      console.log('1111111111')
-      this._snackBar.open(err.error?.message ?? 'Something Went Wrong','OKAY', {
-        duration: 3000
-      });
+    this.api.register(body).subscribe({
+      complete: () => {
+
+      },
+      error: (err) => {
+        console.log('1111111111')
+        this._snackBar.open(err.error?.message ?? 'Something Went Wrong', 'OKAY', {
+          duration: 3000
+        });
+      },
+      next: (res) => {
+        this._snackBar.open('Register Successfully', 'OKAY', {
+          duration: 3000
+        });
+        this.router.navigate(['/register']);
+      },
     })
+    // .subscribe((res) => {
+    //   this._snackBar.open('Register Successfully','OKAY', {
+    //     duration: 3000
+    //   });
+    //   this.router.navigate(['/register']);
+    // },(err) => {
+    //   console.log('1111111111')
+    //   this._snackBar.open(err.error?.message ?? 'Something Went Wrong','OKAY', {
+    //     duration: 3000
+    //   });
+    // })
   }
 }

@@ -1,20 +1,25 @@
 <div class="login-wrapper">
-    <form class="login-form" [formGroup]="loginForm">
-      <mat-icon svgIcon="double-circles-icon" class="home-icon"></mat-icon>
-      <h5 class="main-heading">Register Form</h5>
-      <div class="data-div">
-
+  <form class="login-form" [formGroup]="loginForm">
+    <mat-icon svgIcon="double-circles-icon" class="home-icon"></mat-icon>
+    <h5 class="main-heading">Register Form</h5>
+    <div class="data-div">
       <mat-form-field appearance="fill">
         <mat-label>First Name</mat-label>
-        <input type="text" formControlName="name" matInput placeholder="Placeholder" />
+        <input type="text" formControlName="name" matInput placeholder="First Name" />
+        <mat-error *ngIf="f['name'].invalid && (f['name'].dirty || f['name'].touched)">
+          First Name is required
+        </mat-error>
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Last Name</mat-label>
-        <input type="text" formControlName="surname" matInput placeholder="Placeholder" />
+        <input type="text" formControlName="surname" matInput placeholder="Last Name" />
+        <mat-error *ngIf="f['surname'].invalid && (f['surname'].dirty || f['surname'].touched)">
+          Last Name is required
+        </mat-error>
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Role</mat-label>
-        <mat-select formControlName="vovoidship">
+        <mat-select formControlName="vovoidship" placeholder="Role">
           <mat-option value="option1">Option 1</mat-option>
           <mat-option value="option2">Option 2</mat-option>
           <mat-option value="option3">Option 3</mat-option>
@@ -22,17 +27,26 @@
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Email</mat-label>
-        <input type="email" formControlName="email" matInput placeholder="Placeholder" />
-        <mat-icon class="material-icons-outlined" matSuffix>cancel</mat-icon>
+        <input type="email" formControlName="email" matInput placeholder="Email" />
+        <mat-error *ngIf="f['email'].invalid && (f['email'].dirty || f['email'].touched)">
+          Email is required
+        </mat-error>
+        <!-- <mat-icon class="material-icons-outlined" matSuffix>cancel</mat-icon> -->
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Phone Number</mat-label>
-        <input type="tel" formControlName="phone" matInput placeholder="Placeholder" />
+        <input type="tel" formControlName="phone" matInput placeholder="Phone Number" />
+        <mat-error *ngIf="f['phone'].invalid && (f['phone'].dirty || f['phone'].touched)">
+          Phone Number is required
+        </mat-error>
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Password</mat-label>
-        <input type="password" formControlName="password" matInput placeholder="Placeholder" />
-        <mat-icon class="material-icons-outlined" matSuffix>cancel</mat-icon>
+        <input [type]="showPassword ? 'text' : 'password'" formControlName="password" matInput placeholder="Password" />
+        <mat-icon (click)="passwordToggle()" class="material-icons-outlined" matSuffix>visibility</mat-icon>
+        <mat-error *ngIf="f['password'].invalid && (f['password'].dirty || f['password'].touched)">
+          Password is required
+        </mat-error>
       </mat-form-field>
       <h6 class="signup-link">Already have an account? <a>Login Now</a></h6>
       <h6 class="title">Zgody:</h6>
@@ -40,19 +54,39 @@
         <div class="list-div">
           <h6 class="title-sub">Zgoda marketingowa:</h6>
           <div class="inner-div">
-            <mat-checkbox class="example-checkbox">Lorem ipsum dolor sit amet consectetur. Phasellus enim quam eu pellentesque fringilla eu gravida. Sit felis tristique rhoncus iaculis. Egestas id vel auctor id. Faucibus non fringilla cras feugiat sed interdum.</mat-checkbox>
-            <mat-icon class="settings-icon material-icons-outlined" aria-hidden="false" aria-label="Example home icon" fontIcon="help"></mat-icon>
+            <mat-checkbox class="example-checkbox"
+              >Lorem ipsum dolor sit amet consectetur. Phasellus enim quam eu pellentesque fringilla eu gravida. Sit
+              felis tristique rhoncus iaculis. Egestas id vel auctor id. Faucibus non fringilla cras feugiat sed
+              interdum.</mat-checkbox
+            >
+            <mat-icon
+              class="settings-icon material-icons-outlined"
+              aria-hidden="false"
+              aria-label="Example home icon"
+              fontIcon="help"
+            ></mat-icon>
           </div>
         </div>
         <div class="list-div">
           <h6 class="title-sub">Zgoda marketingowa:</h6>
           <div class="inner-div">
-            <mat-checkbox color="#6750A4" class="example-checkbox">Lorem ipsum dolor sit amet consectetur. Phasellus enim quam eu pellentesque fringilla eu gravida. Sit felis tristique rhoncus iaculis. Egestas id vel auctor id. Faucibus non fringilla cras feugiat sed interdum.</mat-checkbox>
-            <mat-icon class="settings-icon material-icons-outlined" aria-hidden="false" aria-label="Example home icon" fontIcon="help"></mat-icon>
+            <mat-checkbox color="#6750A4" class="example-checkbox"
+              >Lorem ipsum dolor sit amet consectetur. Phasellus enim quam eu pellentesque fringilla eu gravida. Sit
+              felis tristique rhoncus iaculis. Egestas id vel auctor id. Faucibus non fringilla cras feugiat sed
+              interdum.</mat-checkbox
+            >
+            <mat-icon
+              class="settings-icon material-icons-outlined"
+              aria-hidden="false"
+              aria-label="Example home icon"
+              fontIcon="help"
+            ></mat-icon>
           </div>
         </div>
       </div>
-      <button type="button" (click)="saveForm()" mat-raised-button class="btn btn-primary btn-sm btn-block">Register</button>
-      </div>
-    </form>
-  </div>  
+      <button type="button" (click)="saveForm()" mat-raised-button class="btn btn-primary btn-sm btn-block">
+        Register
+      </button>
+    </div>
+  </form>
+</div>

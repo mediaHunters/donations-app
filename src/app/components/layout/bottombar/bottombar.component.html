@@ -1,9 +1,9 @@
 <mat-toolbar class="bottom-mobile-bar">
-  <div>
+  <div (click)="routeNavigate('/products')">
     <mat-icon style="width: 24px;height: 24px;font-size: 24px;" svgIcon="double-circles-icon" class="home-icon"></mat-icon>
     <h5>Best for you</h5>
   </div>
-  <div>
+  <div (click)="routeNavigate('/bookmarks')">
     <mat-icon
       style="font-size: 24px; width: 24px; height: 24px"
       class="bookmark-icon material-icons-outlined"
@@ -14,7 +14,7 @@
     ></mat-icon>
     <h5>Bookmarks</h5>
   </div>
-  <div>
+  <div (click)="routeNavigate('/user-settings')">
     <mat-icon
       style="font-size: 24px; width: 24px; height: 24px"
       class="settings-icon material-icons-outlined"
