@@ -14,16 +14,15 @@ import { ProductListNoSubscriptionComponent } from './components/product-list-no
 import { SubscriptionsNoComponent } from './components/account/subscriptions-no/subscriptions-no.component';
 import { ProductListNoAccountComponent } from './components/product-list-no-account/product-list-no-account.component';
 import { AuthGuard } from './auth.guard';
-import { LoginauthGuard } from './loginauth.guard';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/search', pathMatch: 'full' },
   {
-    path: 'login', component: LoginComponent, canActivate: [LoginauthGuard]
+    path: 'login', component: LoginComponent, canActivate: [AuthGuard]
   },
   {
-    path: 'register', component: RegisterComponent, canActivate: [LoginauthGuard]
+    path: 'register', component: RegisterComponent, canActivate: [AuthGuard]
   },
   {
     path: 'search', component: HomeComponent, canActivate: [AuthGuard]
