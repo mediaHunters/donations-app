@@ -17,7 +17,7 @@
         Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
         consectetur.
       </p>
-      <app-button type="blue-icon">
+      <app-button (click)="routeNavigate('/user-settings')" type="blue-icon">
         <mat-icon fontSet="material-icons">account_circle</mat-icon>
         <span>Szukaj dotacji</span>
       </app-button>
@@ -38,7 +38,7 @@
         Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
         consectetur.
       </p>
-      <app-button type="blue-icon">
+      <app-button (click)="routeNavigate('/products')" type="blue-icon">
         <mat-icon fontSet="material-icons">search</mat-icon>
         <span>Szukaj dotacji</span>
       </app-button>
@@ -99,21 +99,21 @@
     </div>
 
     <div class="register__second-row">
-      <app-button type="golden-icon">
+      <app-button (click)="routeNavigate('/subscriptions')" type="golden-icon">
         <mat-icon svgIcon="subscription-calendar"></mat-icon>
         <span>Subskrybuj</span>
       </app-button>
-      <app-button type="blue-icon">
+      <app-button (click)="routeNavigate('/products')" type="blue-icon">
         <mat-icon>search</mat-icon>
         <span>Zarejestruj się</span>
       </app-button>
     </div>
 
-    <div class="register__third-row">
+    <div (click)="routeNavigate('/credit-card')"  class="register__third-row">
       <mat-icon>add_card</mat-icon>
       <span>Dodaj kartę płatniczą</span>
     </div>
   </div>
 
-  <div class="faq-button"><app-button type="light-blue">FAQ</app-button></div>
+  <div (click)="routeNavigate('/faq')" class="faq-button"><app-button type="light-blue">FAQ</app-button></div>
 </div>
