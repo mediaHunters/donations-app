@@ -18,12 +18,15 @@ import { LoginauthGuard } from './loginauth.guard';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/products', pathMatch: 'full' },
+  { path: '', redirectTo: '/search', pathMatch: 'full' },
   {
     path: 'login', component: LoginComponent, canActivate: [LoginauthGuard]
   },
   {
     path: 'register', component: RegisterComponent, canActivate: [LoginauthGuard]
+  },
+  {
+    path: 'search', component: HomeComponent, canActivate: [AuthGuard]
   },
   {
     path: 'products', component: ProductListComponent, canActivate: [AuthGuard]
