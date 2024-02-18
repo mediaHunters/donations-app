@@ -55,3 +55,11 @@
     width: 100% !important;
   }
 }
+
+::ng-deep {
+  .custom-header {
+    .mat-expansion-indicator {
+      display: none !important;
+    }
+  }
+}
