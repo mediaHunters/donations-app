@@ -113,11 +113,11 @@
             [ngClass]="sidebarState === 'close' ? 'mdc-list-item__content--closed' : 'mdc-list-item__content--opened'"
           >
             @if (sidebarState === 'open') {
-              <mat-icon color="primary" [@iconAnimation]="sidebarState">account_circle</mat-icon>
+              <mat-icon color="#00164E" [@iconAnimation]="sidebarState">account_circle</mat-icon>
               <span style="user-select: none" class="label" [@labelAnimation]="sidebarState">Account</span>
               <!-- <span class="counter">2</span> -->
             } @else {
-              <mat-icon color="primary" [@iconAnimation]="sidebarState">account_circle</mat-icon>
+              <mat-icon color="#00164E" [@iconAnimation]="sidebarState">account_circle</mat-icon>
               <span style="user-select: none" class="label" [@labelAnimation]="sidebarState">Account</span>
             }
           </a>
@@ -133,11 +133,15 @@
           [ngClass]="sidebarState === 'close' ? 'mdc-list-item__content--closed' : 'mdc-list-item__content--opened'"
         >
           @if (sidebarState === 'open') {
-            <mat-icon color="primary" [@iconAnimation]="sidebarState">settings</mat-icon>
+            <mat-icon class="settings-icon material-icons-outlined" color="#00164E" [@iconAnimation]="sidebarState"
+              >settings</mat-icon
+            >
             <span class="label" [@labelAnimation]="sidebarState">User Settings</span>
             <!-- <span class="counter">2</span> -->
           } @else {
-            <mat-icon color="primary" [@iconAnimation]="sidebarState">settings</mat-icon>
+            <mat-icon class="settings-icon material-icons-outlined" color="#00164E" [@iconAnimation]="sidebarState"
+              >settings</mat-icon
+            >
             <span class="label" [@labelAnimation]="sidebarState">User Settings</span>
           }
         </a>
@@ -149,11 +153,11 @@
           [ngClass]="sidebarState === 'close' ? 'mdc-list-item__content--closed' : 'mdc-list-item__content--opened'"
         >
           @if (sidebarState === 'open') {
-            <mat-icon color="primary" [@iconAnimation]="sidebarState">help_outline</mat-icon>
+            <mat-icon color="#00164E" [@iconAnimation]="sidebarState">help_outline</mat-icon>
             <span class="label" [@labelAnimation]="sidebarState">Subscriptions</span>
             <!-- <span class="counter">2</span> -->
           } @else {
-            <mat-icon color="primary" [@iconAnimation]="sidebarState">help_outline</mat-icon>
+            <mat-icon color="#00164E" [@iconAnimation]="sidebarState">help_outline</mat-icon>
             <span class="label" [@labelAnimation]="sidebarState">Subscriptions</span>
           }
         </a>
@@ -165,11 +169,11 @@
           [ngClass]="sidebarState === 'close' ? 'mdc-list-item__content--closed' : 'mdc-list-item__content--opened'"
         >
           @if (sidebarState === 'open') {
-            <mat-icon color="primary" [@iconAnimation]="sidebarState">help</mat-icon>
+            <mat-icon color="#00164E" [@iconAnimation]="sidebarState">credit_card</mat-icon>
             <span class="label" [@labelAnimation]="sidebarState">Credit Card</span>
             <!-- <span class="counter">2</span> -->
           } @else {
-            <mat-icon color="primary" [@iconAnimation]="sidebarState">help</mat-icon>
+            <mat-icon color="#00164E" [@iconAnimation]="sidebarState">credit_card</mat-icon>
             <span class="label" [@labelAnimation]="sidebarState">Credit Card</span>
           }
         </a>
