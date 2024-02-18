@@ -15,6 +15,7 @@ import { SubscriptionsNoComponent } from './components/account/subscriptions-no/
 import { ProductListNoAccountComponent } from './components/product-list-no-account/product-list-no-account.component';
 import { AuthGuard } from './auth.guard';
 import { LoginauthGuard } from './loginauth.guard';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/products', pathMatch: 'full' },
@@ -54,7 +55,7 @@ const routes: Routes = [
   {
     path: 'credit-card', component: CreditCardComponent, canActivate: [AuthGuard]
   },
-  { path: '**', component: HomeComponent }
+  { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({

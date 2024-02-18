@@ -20,6 +20,7 @@ import { ProductListNoAccountComponent } from './product-list-no-account/product
 import { NgxMasonryModule } from 'ngx-masonry';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NotFoundComponent } from './not-found/not-found.component';
 const COMPONENTS = [
   HomeComponent,
   LoginComponent,
@@ -33,7 +34,8 @@ const COMPONENTS = [
   UserSettingsComponent,
   SubscriptionsComponent,
   SubscriptionsNoComponent,
-  CreditCardComponent
+  CreditCardComponent,
+  NotFoundComponent
 ];
 
 @NgModule({
