@@ -74,3 +74,8 @@ body {
 .cdk-overlay-container {
   z-index: 10000000 !important;
 }
+
+.mat-expansion-panel-header.mat-expanded:focus {
+  outline: none !important; /* Remove default focus outline */
+  background-color: #e0e0e0 !important; /* Change the background color when focused */
+}

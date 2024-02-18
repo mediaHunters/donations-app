@@ -14,7 +14,8 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatRippleModule } from "@angular/material/core";
 const COMPONENTS = [
     MatToolbarModule,
     MatSidenavModule,
@@ -34,7 +35,8 @@ const COMPONENTS = [
     MatCardModule,
     MatExpansionModule,
     MatButtonToggleModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatRippleModule
 ]
 
 @NgModule({
