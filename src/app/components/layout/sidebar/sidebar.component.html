@@ -9,7 +9,7 @@
     >
       @if (sidebarState === 'open') {
         <mat-icon [@iconAnimation]="sidebarState">search</mat-icon>
-        <span class="label" [@labelAnimation]="sidebarState">Wyszukaj</span>
+        <span class="label" [@labelAnimation]="sidebarState">Search</span>
       } @else {
         <div class="blue-square-icon">
           <mat-icon [@iconAnimation]="sidebarState" class="white-icon">search</mat-icon>
@@ -179,6 +179,7 @@
         </a>
       </mat-expansion-panel>
     </a>
+    <mat-divider style="margin-left: 30px;margin-right: 30px;" *ngIf="mobileQuery.matches"></mat-divider>
     <mat-list-item *ngIf="mobileQuery.matches">
       <p>Legal Text Header</p>
     </mat-list-item>
