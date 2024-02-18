@@ -70,6 +70,7 @@
       disableRipple
       title="account"
       class="mat-expanison"
+      style="user-select: none"
       [ngClass]="sidebarState === 'close' ? 'mdc-list-item__content--closed' : 'mdc-list-item__content--opened'"
     >
       <!-- <mat-icon
@@ -80,11 +81,18 @@
       </mat-icon>
 
       <span class="label" [@labelAnimation]="sidebarState">Konto</span> -->
-      <mat-expansion-panel style="user-select: none;" disableRipple (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-        <mat-expansion-panel-header 
-        class="custom-header"
-        [ngClass]="sidebarState === 'close' ? 'mdc-list-item__content--closed' : 'mdc-list-item__content--opened'"
-         style="padding: 0px;user-select: none;">
+      <mat-expansion-panel
+        style="user-select: none"
+        disableRipple
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+      >
+        <mat-expansion-panel-header
+          class="custom-header"
+          disableRipple
+          [ngClass]="sidebarState === 'close' ? 'mdc-list-item__content--closed' : 'mdc-list-item__content--opened'"
+          style="padding: 0px; user-select: none"
+        >
           <!-- <mat-panel-title>
             <mat-icon
         color="primary"
@@ -96,7 +104,7 @@
       <span class="label" [@labelAnimation]="sidebarState">Account</span>
           </mat-panel-title> -->
           <a
-            style="padding: 0;user-select: none;"
+            style="padding: 0; user-select: none"
             mat-list-item
             routerLinkActive="active-list-item"
             routerLink="faq"
@@ -105,11 +113,11 @@
           >
             @if (sidebarState === 'open') {
               <mat-icon color="primary" [@iconAnimation]="sidebarState">account_circle</mat-icon>
-              <span style="user-select: none;" class="label" [@labelAnimation]="sidebarState">Account</span>
+              <span style="user-select: none" class="label" [@labelAnimation]="sidebarState">Account</span>
               <!-- <span class="counter">2</span> -->
             } @else {
               <mat-icon color="primary" [@iconAnimation]="sidebarState">account_circle</mat-icon>
-              <span style="user-select: none;" class="label" [@labelAnimation]="sidebarState">Account</span>
+              <span style="user-select: none" class="label" [@labelAnimation]="sidebarState">Account</span>
             }
           </a>
           <!-- <mat-panel-description>
