@@ -1,6 +1,8 @@
 <div class="toggle-sidebar">
   <button mat-icon-button type="button" (click)="toggleSideNav()">
-    <mat-icon color="primary">menu</mat-icon>
+    <mat-icon *ngIf="!mobileQuery.matches" color="primary">menu</mat-icon>
+    <mat-icon *ngIf="mobileQuery.matches && isOpened" color="primary">close</mat-icon>
+    <mat-icon *ngIf="mobileQuery.matches && !isOpened" color="primary">menu</mat-icon>
   </button>
   <mat-icon svgIcon="double-circles-icon" class="home-icon"></mat-icon>
   <a [routerLink]="['/']" class="home-link">GrantsFinder.eu</a>
